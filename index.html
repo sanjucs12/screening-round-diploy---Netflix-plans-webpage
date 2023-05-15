@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .carousel-item.active .card {
+        border: 2px solid red; /* Highlighting the active plan */
+      }
+
+       /* Custom styling for carousel control buttons */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 10%;
+      color: #fff;
+      text-align: center;
+      opacity: 1;
+      z-index: 999;
+    }
+
+    .carousel-control-prev:focus,
+    .carousel-control-next:focus {
+      outline: none;
+    }
+
+    .carousel-control-prev {
+      left: 0;
+      background-color: rgba(58, 67, 199, 0.5);
+    }
+
+    .carousel-control-next {
+      right: 0;
+      background-color: rgba(29, 92, 228, 0.5);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: no-repeat center center;
+      background-size: cover;
+      opacity: 1;
+    }
+    </style>
+    <title>My simple website</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container">
+    <h1 class="text-center">NETFLIX PLANS</h1>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Plan 1</h5>
+              <p class="card-text">Basic Plan $49/month</p>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#orderModal"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Plan 2</h5>
+              <p class="card-text">Standard Plan $59/month</p>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#orderModal"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Plan 3</h5>
+              <p class="card-text">Premium Plan $69/month</p>
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#orderModal"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Modal -->
+      <div
+        class="modal fade"
+        id="orderModal"
+        tabindex="-1"
+        aria-labelledby="orderModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="orderModalLabel">Place an Order</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              
+              <form id="myForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="comments" class="form-label"
+                    >Order Comments</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="comments"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Submit Order
+                  </button>
+              </form>
+            </div>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ./////////////Slider /////////////-->
+
+    <div class="container">
+      <h1>Slide to change the Plan</h1>
+
+      <div id="userSlider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Plan 1</h5>
+                <p class="card-text">Basic Plan for 2 devices</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Plan 2</h5>
+                <p class="card-text">Standard Plan for 5 devices users</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Plan 3</h5>
+                <p class="card-text">Premium Plan 8 devices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#userSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#userSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+
+      <input
+        type="range"
+        id="userRange"
+        min="0"
+        max="30"
+        step="10"
+        value="0"
+        class="form-range mt-3"
+      />
+    </div>
+    <div id="submissionDiv"></div>
+
+    <script>
+      // Update active plan on range input change
+      document
+        .getElementById("userRange")
+        .addEventListener("input", function () {
+          var value = parseInt(this.value);
+          var activeIndex = Math.floor(value / 10);
+          var carousel = document.getElementById("userSlider");
+          carousel
+            .querySelector(".carousel-item.active")
+            .classList.remove("active");
+          carousel
+            .querySelectorAll(".carousel-item")
+            [activeIndex].classList.add("active");
+        });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
